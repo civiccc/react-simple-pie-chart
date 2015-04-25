@@ -6,7 +6,7 @@
 Need a simple `<svg>` pie chart and don't want to bring in any heavy
 dependencies? You've come to the right place.
 
-[Demo](http://jsfiddle.net/qgxyw3mp/1/)
+[Demo](http://jsfiddle.net/qgxyw3mp/3/)
 
 ![Example pie
 chart](http://brigade.github.io/react-simple-pie-chart/example-pie-chart.svg)
