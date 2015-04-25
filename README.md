@@ -8,6 +8,9 @@ dependencies? You've come to the right place.
 
 [Demo](http://jsfiddle.net/qgxyw3mp/1/)
 
+![Example pie
+chart](http://brigade.github.io/react-simple-pie-chart/example-pie-chart.svg)
+
 ## Installation
 
 ### npm

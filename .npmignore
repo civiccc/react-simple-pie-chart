@@ -1,3 +1,4 @@
+*.svg
 .eslintignore
 .eslintrc
 .overcommit.yml
