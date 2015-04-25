@@ -74,8 +74,8 @@ const PieChart = React.createClass({
 
       // We need to convert to radians for cosine and sine functions.
       const radSegment = this._degreesToRadians(segment);
-      const nextX = Math.round(Math.cos(radSegment) * radius);
-      const nextY = Math.round(Math.sin(radSegment) * radius);
+      const nextX = Math.cos(radSegment) * radius;
+      const nextY = Math.sin(radSegment) * radius;
 
       // d is a string that describes the path of the slice.
       // The weirdly placed minus signs [eg, (-(lastY))] are due to the fact
