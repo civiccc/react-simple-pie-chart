@@ -1,6 +1,6 @@
 {
   "name": "react-simple-pie-chart",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React component to generate simple pie charts.",
   "main": "build/npm/pie_chart.js",
   "repository": {
