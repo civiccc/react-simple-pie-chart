@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" data-reactid=".0">
+  <g transform="rotate(-90 100 100)" data-reactid=".0.0">
+    <path d="M 100,100 l 99,0 a99,99 0 0,0 -9,-40 z" fill="#468966" data-reactid=".0.0.$0"></path>
+    <path d="M 100,100 l 90,-40 a99,99 0 0,0 -59,-54 z" fill="#FFF0A5" data-reactid=".0.0.$1"></path>
+    <path d="M 100,100 l 31,-94 a99,99 0 0,0 -111,36 z" fill="#FFB03B" data-reactid=".0.0.$2"></path>
+    <path d="M 100,100 l -80,-58 a99,99 0 0,0 30,144 z" fill="#B64926" data-reactid=".0.0.$3"></path>
+    <path d="M 100,100 l -50,86 a99,99 0 0,0 149,-86 z" fill="#8E2800" data-reactid=".0.0.$4"></path>
+  </g>
+</svg>
