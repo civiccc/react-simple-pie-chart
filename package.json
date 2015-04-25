@@ -21,7 +21,7 @@
     "Joe Lencioni"
   ],
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "react": "~0.13.x"
   },
   "devDependencies": {
@@ -47,21 +47,5 @@
     "charting",
     "data visualization",
     "pie chart"
-  ],
-  "dependencies": {
-    "babel": "^5.1.12",
-    "babel-core": "^5.1.12",
-    "babel-loader": "^5.0.0",
-    "eslint": "^0.20.0",
-    "jasmine-core": "^2.2.0",
-    "eslint-plugin-react": "^2.2.0",
-    "karma": "^0.12.32",
-    "karma-chrome-launcher": "^0.1.8",
-    "karma-cli": "^0.0.4",
-    "karma-firefox-launcher": "^0.1.4",
-    "karma-jasmine": "^0.3.5",
-    "karma-webpack": "^1.5.0",
-    "react": "^0.13.2",
-    "webpack": "^1.8.9"
-  }
+  ]
 }
