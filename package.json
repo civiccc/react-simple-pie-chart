@@ -1,0 +1,51 @@
+{
+  "name": "react-simple-pie-chart",
+  "version": "0.1",
+  "description": "A React component to generate simple pie charts.",
+  "main": "build/npm/pie_chart.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brigade/react-simple-pie-chart.git"
+  },
+  "homepage": "https://github.com/brigade/react-simple-pie-chart",
+  "bugs": "https://github.com/brigade/react-simple-pie-chart/issues",
+  "scripts": {
+    "build-npm": "rm -rf build/npm && mkdir -p build/npm && babel src/pie_chart.jsx --out-file build/npm/pie_chart.js",
+    "test": "./node_modules/.bin/eslint . && ./node_modules/.bin/karma start",
+    "prepublish": "npm run build-npm"
+  },
+  "author": "Brigade Engineering",
+  "contributors": [
+    {
+      "name": "Joe Lencioni"
+    }
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "~0.13.x"
+  },
+  "devDependencies": {
+    "babel": "^5.1.9",
+    "babel-core": "^5.1.9",
+    "babel-loader": "^5.0.0",
+    "eslint": "^0.20.0",
+    "eslint-plugin-react": "^2.2.0",
+    "jasmine-core": "^2.1.3",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-cli": "0.0.4",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-jasmine": "^0.3.5",
+    "karma-webpack": "^1.5.0",
+    "webpack": "^1.5.3"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "react-component",
+    "charts",
+    "charting",
+    "data visualization",
+    "pie chart"
+  ]
+}
