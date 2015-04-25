@@ -26,23 +26,16 @@ const PieChart = React.createClass({
   },
 
   /**
-   * @param {Number} degrees
-   * @return {Number} radians
-   */
-  _degreesToRadians: function(degrees) {
-    return degrees * (Math.PI / 180);
-  },
-
-  /**
    * @return {Object[]}
    */
   _renderPaths: function() {
+    const radCircumference = Math.PI * 2;
     const center = this.props.size / 2;
     const radius = center - 1; // padding to prevent clipping
     const total = this.props.slices.reduce(
       (totalValue, slice) => totalValue + slice.value, 0);
 
-    let segment = 0;
+    let radSegment = 0;
     let lastX = radius;
     let lastY = 0;
 
@@ -70,10 +63,7 @@ const PieChart = React.createClass({
       // Should the arc go the long way round?
       const longArc = (valuePercentage <= 0.5) ? 0 : 1;
 
-      segment += valuePercentage * 360;
-
-      // We need to convert to radians for cosine and sine functions.
-      const radSegment = this._degreesToRadians(segment);
+      radSegment += valuePercentage * radCircumference;
       const nextX = Math.cos(radSegment) * radius;
       const nextY = Math.sin(radSegment) * radius;
 
