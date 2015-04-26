@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" data-reactid=".0">
-  <g transform="rotate(-90 100 100)" data-reactid=".0.0">
-    <path d="M 100,100 l 99,0 a99,99 0 0,0 -9,-40 z" fill="#468966" data-reactid=".0.0.$0"></path>
-    <path d="M 100,100 l 90,-40 a99,99 0 0,0 -59,-54 z" fill="#FFF0A5" data-reactid=".0.0.$1"></path>
-    <path d="M 100,100 l 31,-94 a99,99 0 0,0 -111,36 z" fill="#FFB03B" data-reactid=".0.0.$2"></path>
-    <path d="M 100,100 l -80,-58 a99,99 0 0,0 30,144 z" fill="#B64926" data-reactid=".0.0.$3"></path>
-    <path d="M 100,100 l -50,86 a99,99 0 0,0 149,-86 z" fill="#8E2800" data-reactid=".0.0.$4"></path>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" data-reactid=".0"><g transform="rotate(-90 100 100)" data-reactid=".0.0"><path d="M 100,100 l 99,0 a99,99 0 0,0 -8.558999693382518,-40.266927664504216 z" fill="#468966" data-reactid=".0.0.$0"></path><path d="M 100,100 l 90.44100030661748,-40.266927664504216 a99,99 0 0,0 -59.848317863497684,-53.88766744871598 z" fill="#FFF0A5" data-reactid=".0.0.$1"></path><path d="M 100,100 l 30.5926824431198,-94.1545951132202 a99,99 0 0,0 -110.6853648862396,35.963855136265344 z" fill="#FFB03B" data-reactid=".0.0.$2"></path><path d="M 100,100 l -80.0926824431198,-58.19073997695485 a99,99 0 0,0 30.592682443119756,143.92725495161426 z" fill="#B64926" data-reactid=".0.0.$3"></path><path d="M 100,100 l -49.50000000000004,85.7365149746594 a99,99 0 0,0 148.50000000000006,-85.73651497465937 z" fill="#8E2800" data-reactid=".0.0.$4"></path></g></svg>
