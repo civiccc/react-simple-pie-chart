@@ -1,6 +1,7 @@
 ## master (unreleased)
 
 - Reduce jaggedness from thin segments
+- Remove size prop
 
 ## 0.1.1
 

@@ -1,6 +1,7 @@
 const React = require('react/addons');
 
 const { PropTypes } = React;
+const size = 100;
 
 /**
  * Generates an SVG pie chart.
@@ -9,7 +10,6 @@ const { PropTypes } = React;
 const PieChart = React.createClass({
   propTypes: {
     className: PropTypes.string,
-    size: PropTypes.number,
     slices: PropTypes.arrayOf(PropTypes.shape({
       color: PropTypes.string.isRequired, // hex color
       value: PropTypes.number.isRequired,
@@ -17,20 +17,11 @@ const PieChart = React.createClass({
   },
 
   /**
-   * @return {Object}
-   */
-  getDefaultProps: function() {
-    return {
-      size: 200,
-    };
-  },
-
-  /**
    * @return {Object[]}
    */
   _renderPaths: function() {
     const radCircumference = Math.PI * 2;
-    const center = this.props.size / 2;
+    const center = size / 2;
     const radius = center - 1; // padding to prevent clipping
     const total = this.props.slices.reduce(
       (totalValue, slice) => totalValue + slice.value, 0);
@@ -92,7 +83,6 @@ const PieChart = React.createClass({
    * @return {Object}
    */
   render: function() {
-    const { size } = this.props;
     const center = size / 2;
 
     return (
