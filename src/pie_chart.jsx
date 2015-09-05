@@ -19,7 +19,7 @@ const PieChart = React.createClass({
   /**
    * @return {Object[]}
    */
-  _renderPaths: function() {
+  _renderPaths() {
     const radCircumference = Math.PI * 2;
     const center = size / 2;
     const radius = center - 1; // padding to prevent clipping
@@ -82,7 +82,7 @@ const PieChart = React.createClass({
   /**
    * @return {Object}
    */
-  render: function() {
+  render() {
     const center = size / 2;
 
     return (
