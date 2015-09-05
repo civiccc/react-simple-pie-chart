@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build-npm": "rm -rf build/npm && mkdir -p build/npm && babel src/pie_chart.jsx --out-file build/npm/pie_chart.js",
-    "test": "eslint . && ./node_modules/.bin/karma start",
+    "test": "eslint . --ext .js,.jsx && ./node_modules/.bin/karma start",
     "prepublish": "npm run build-npm"
   },
   "author": "Brigade Engineering",
