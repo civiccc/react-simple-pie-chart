@@ -1,5 +1,8 @@
 ## master (unreleased)
 
+- Update for React 0.14
+- Move `react` from `dependencies` to `peerDependencies`
+
 ## 0.2.0
 
 - Reduce jaggedness from thin segments

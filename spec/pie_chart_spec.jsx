@@ -1,14 +1,14 @@
 const PieChart = require('../src/pie_chart.jsx');
-const React = require('../node_modules/react/addons.js');
-
-const { addons: { TestUtils } } = React;
+const React = require('react');
+const TestUtils = require('react-addons-test-utils');
+const ReactDOM = require('react-dom');
 
 let div;
 
 const renderAttached = function(component) {
   div = document.createElement('div');
   document.body.appendChild(div);
-  const renderedComponent = React.render(component, div);
+  const renderedComponent = ReactDOM.render(component, div);
   return renderedComponent;
 };
 
@@ -21,7 +21,7 @@ describe('<PieChart>', function() {
   });
 
   it('is an svg', () => {
-    expect(this.subject().getDOMNode().tagName.toLowerCase())
+    expect(ReactDOM.findDOMNode(this.subject()).tagName.toLowerCase())
       .toEqual('svg');
   });
 
@@ -110,7 +110,7 @@ describe('<PieChart>', function() {
       });
 
       it('has the correct color', () => {
-        expect(this.circle.props.fill).toEqual('#0f0');
+        expect(this.circle.getAttribute('fill')).toEqual('#0f0');
       });
     });
 
