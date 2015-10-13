@@ -1,5 +1,7 @@
 ## master (unreleased)
 
+## 0.2.1
+
 - Update for React 0.14
 - Move `react` from `dependencies` to `peerDependencies`
 
