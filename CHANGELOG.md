@@ -1,5 +1,9 @@
 ## master (unreleased)
 
+## 0.2.2
+
+- Fix centering when rendering as a circle
+
 ## 0.2.1
 
 - Update for React 0.14
