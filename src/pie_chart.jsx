@@ -37,8 +37,8 @@ const PieChart = React.createClass({
         return (
           <circle
             r={radius}
-            cx={radius}
-            cy={radius}
+            cx={center}
+            cy={center}
             fill={color}
             key={index}
           />
