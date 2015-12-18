@@ -9,7 +9,6 @@ const size = 100;
  */
 const PieChart = React.createClass({
   propTypes: {
-    className: PropTypes.string,
     slices: PropTypes.arrayOf(PropTypes.shape({
       color: PropTypes.string.isRequired, // hex color
       value: PropTypes.number.isRequired,
