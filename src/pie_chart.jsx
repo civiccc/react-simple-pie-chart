@@ -16,7 +16,7 @@ export default class PieChart extends React.Component {
    */
   _renderPaths() {
     const total = this.props.slices.reduce(
-      (totalValue, slice) => totalValue + slice.value, 0);
+      (totalValue, { value }) => totalValue + value, 0);
 
     let radSegment = 0;
     let lastX = radius;
