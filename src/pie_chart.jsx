@@ -2,6 +2,9 @@ import React from 'react';
 
 const { PropTypes } = React;
 const size = 100;
+const radCircumference = Math.PI * 2;
+const center = size / 2;
+const radius = center - 1; // padding to prevent clipping
 
 /**
  * Generates an SVG pie chart.
@@ -20,9 +23,6 @@ export default React.createClass({
    * @return {Object[]}
    */
   _renderPaths() {
-    const radCircumference = Math.PI * 2;
-    const center = size / 2;
-    const radius = center - 1; // padding to prevent clipping
     const total = this.props.slices.reduce(
       (totalValue, slice) => totalValue + slice.value, 0);
 
@@ -83,8 +83,6 @@ export default React.createClass({
    * @return {Object}
    */
   render() {
-    const center = size / 2;
-
     return (
       <svg viewBox={`0 0 ${size} ${size}`}>
         <g transform={`rotate(-90 ${center} ${center})`}>
