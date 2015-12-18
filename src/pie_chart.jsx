@@ -12,17 +12,18 @@ const radius = center - 1; // padding to prevent clipping
  */
 export default class PieChart extends React.Component {
   /**
+   * @param {Object[]} slices
    * @return {Object[]}
    */
-  _renderPaths() {
-    const total = this.props.slices.reduce(
+  _renderPaths(slices) {
+    const total = slices.reduce(
       (totalValue, { value }) => totalValue + value, 0);
 
     let radSegment = 0;
     let lastX = radius;
     let lastY = 0;
 
-    return this.props.slices.map(({ color, value }, index) => {
+    return slices.map(({ color, value }, index) => {
       // Should we just draw a circle?
       if (value === total) {
         return (
@@ -77,7 +78,7 @@ export default class PieChart extends React.Component {
     return (
       <svg viewBox={`0 0 ${size} ${size}`}>
         <g transform={`rotate(-90 ${center} ${center})`}>
-          {this._renderPaths()}
+          {this._renderPaths(this.props.slices)}
         </g>
       </svg>
     );
