@@ -10,15 +10,7 @@ const radius = center - 1; // padding to prevent clipping
  * Generates an SVG pie chart.
  * @see {http://wiki.scribus.net/canvas/Making_a_Pie_Chart}
  */
-export default React.createClass({
-  propTypes: {
-    className: PropTypes.string,
-    slices: PropTypes.arrayOf(PropTypes.shape({
-      color: PropTypes.string.isRequired, // hex color
-      value: PropTypes.number.isRequired,
-    })).isRequired,
-  },
-
+export default class PieChart extends React.Component {
   /**
    * @return {Object[]}
    */
@@ -77,7 +69,7 @@ export default React.createClass({
 
       return <path d={d} fill={color} key={index} />;
     });
-  },
+  }
 
   /**
    * @return {Object}
@@ -91,4 +83,11 @@ export default React.createClass({
       </svg>
     );
   }
-});
+}
+
+PieChart.propTypes = {
+  slices: PropTypes.arrayOf(PropTypes.shape({
+    color: PropTypes.string.isRequired, // hex color
+    value: PropTypes.number.isRequired,
+  })).isRequired,
+};
