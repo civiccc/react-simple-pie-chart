@@ -1,5 +1,7 @@
 ## master (unreleased)
 
+- Remove unused className propType
+
 ## 0.2.2
 
 - Fix centering when rendering as a circle
