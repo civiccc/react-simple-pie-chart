@@ -1,3 +1,6 @@
 module.exports = {
-  'extends': 'eslint-config-brigade/react',
+  extends: 'eslint-config-brigade/react',
+  ecmaFeatures: {
+    modules: true,
+  },
 };

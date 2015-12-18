@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 const { PropTypes } = React;
 const size = 100;
@@ -7,7 +7,7 @@ const size = 100;
  * Generates an SVG pie chart.
  * @see {http://wiki.scribus.net/canvas/Making_a_Pie_Chart}
  */
-const PieChart = React.createClass({
+export default React.createClass({
   propTypes: {
     className: PropTypes.string,
     slices: PropTypes.arrayOf(PropTypes.shape({
@@ -94,5 +94,3 @@ const PieChart = React.createClass({
     );
   }
 });
-
-module.exports = PieChart;
