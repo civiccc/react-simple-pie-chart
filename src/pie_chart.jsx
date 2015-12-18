@@ -22,8 +22,7 @@ export default class PieChart extends React.Component {
     let lastX = radius;
     let lastY = 0;
 
-    return this.props.slices.map((slice, index) => {
-      const { color, value } = slice;
+    return this.props.slices.map(({ color, value }, index) => {
       // Should we just draw a circle?
       if (value === total) {
         return (
