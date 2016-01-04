@@ -1,7 +1,7 @@
-const PieChart = require('../src/pie_chart.jsx');
-const React = require('react');
-const TestUtils = require('react-addons-test-utils');
-const ReactDOM = require('react-dom');
+import PieChart from '../src/pie_chart.jsx';
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
+import ReactDOM from 'react-dom';
 
 let div;
 

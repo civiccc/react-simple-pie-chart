@@ -3,7 +3,6 @@
 
 module.exports = function(config) {
   config.set({
-
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -32,7 +31,7 @@ module.exports = function(config) {
         loaders: [
           {
             test: /\.jsx?$/,
-            loaders: ['babel-loader?optional=runtime&cacheDirectory=true'],
+            loaders: ['babel-loader?cacheDirectory=true'],
             exclude: /node_modules/
           }
         ]

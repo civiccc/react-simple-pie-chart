@@ -1,6 +1,6 @@
 *.svg
 .eslintignore
-.eslintrc
+.eslintrc.js
 .overcommit.yml
 .projections.json
 CHANGELOG.md

@@ -22,7 +22,7 @@ npm install react-simple-pie-chart --save
 ## Usage
 
 ```javascript
-var PieChart = require('react-simple-pie-chart');
+import PieChart from 'react-simple-pie-chart';
 ```
 
 ```javascript
