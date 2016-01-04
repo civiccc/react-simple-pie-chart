@@ -1,5 +1,11 @@
 ## master (unreleased)
 
+## 0.3.2
+
+- Upgrade Babel from 5 to 6
+- Convert to ES2015 module
+- Convert to ES2015 class
+
 ## 0.2.2
 
 - Fix centering when rendering as a circle
