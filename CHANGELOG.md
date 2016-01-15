@@ -1,6 +1,9 @@
 ## master (unreleased)
 
-## 0.3.2
+## 0.3.1
+- Make bundled pie-chart.js easier to import
+
+## 0.3.0
 
 - Upgrade Babel from 5 to 6
 - Convert to ES2015 module
