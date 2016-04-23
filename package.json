@@ -22,7 +22,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "react": "^0.14 || ^15",
+    "react": "^0.14 || ^15"
   },
   "devDependencies": {
     "babel": "^6.0.0",
