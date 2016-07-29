@@ -1,5 +1,8 @@
 ## master (unreleased)
 
+## 0.4.0
+- Relax dependency on React to allow v15
+
 ## 0.3.1
 - Make bundled pie-chart.js easier to import
 
