@@ -1,6 +1,6 @@
 {
   "name": "react-simple-pie-chart",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A React component to generate simple pie charts.",
   "main": "build/npm/pie_chart.js",
   "repository": {
@@ -42,6 +42,7 @@
     "karma-firefox-launcher": "^0.1.6",
     "karma-jasmine": "^0.3.6",
     "karma-webpack": "^1.7.0",
+    "prop-types": "^15.5.8",
     "react": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
     "react-dom": "^0.14.0",
