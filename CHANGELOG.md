@@ -1,5 +1,8 @@
 ## master (unreleased)
 
+## 0.4.1
+- Use `prop-types` package instead of `React.PropTypes`
+
 ## 0.4.0
 - Relax dependency on React to allow v15
 
