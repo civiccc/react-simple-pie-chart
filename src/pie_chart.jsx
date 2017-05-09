@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const { PropTypes } = React;
 const size = 100;
 const radCircumference = Math.PI * 2;
 const center = size / 2;
