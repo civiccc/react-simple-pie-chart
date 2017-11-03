@@ -10,14 +10,14 @@ const radius = center - 1; // padding to prevent clipping
  * @param {Object[]} slices
  * @return {Object[]}
  */
-function renderPaths (slices) {
+function renderPaths(slices) {
   const total = slices.reduce((totalValue, { value }) => totalValue + value, 0);
 
   let radSegment = 0;
   let lastX = radius;
   let lastY = 0;
 
-  return slices.map(({color, value}, index) => {
+  return slices.map(({ color, value }, index) => {
     // Should we just draw a circle?
     if (value === total) {
       return (
