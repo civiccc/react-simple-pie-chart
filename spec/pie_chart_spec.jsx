@@ -120,4 +120,27 @@ describe('<PieChart>', function() {
       expect(paths.length).toEqual(0);
     });
   });
+
+  describe('with a border around the pie', () => {
+    const color = '#000000';
+    const width = 1;
+
+    beforeEach(() => {
+      this.props.slices = [];
+      this.props.borderWidth = width;
+      this.props.borderColor = color;
+    });
+
+    it('renders a black border', () => {
+      const circle =
+        TestUtils.findRenderedDOMComponentWithTag(this.subject(), 'circle');
+      expect(circle.getAttribute('stroke')).toEqual(color);
+    });
+
+    it('renders a border of strength 1', () => {
+      const circle =
+        TestUtils.findRenderedDOMComponentWithTag(this.subject(), 'circle');
+      expect(circle.getAttribute('stroke-width')).toEqual(String(width));
+    });
+  });
 });

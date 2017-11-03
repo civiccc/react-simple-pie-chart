@@ -81,7 +81,7 @@ export default class PieChart extends React.Component {
         r={radius}
         stroke={this.props.borderColor}
         strokeWidth={this.props.borderWidth}
-        fill="transparent"
+        fill='transparent'
       />
     ) : null;
 
