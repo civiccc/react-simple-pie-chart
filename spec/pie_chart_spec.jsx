@@ -131,13 +131,13 @@ describe('<PieChart>', function() {
       this.props.borderColor = color;
     });
 
-    it('renders a black border', () => {
+    it(`renders a border with color ${color}`, () => {
       const circle =
         TestUtils.findRenderedDOMComponentWithTag(this.subject(), 'circle');
       expect(circle.getAttribute('stroke')).toEqual(color);
     });
 
-    it('renders a border of strength 1', () => {
+    it(`renders a border of strength ${width}`, () => {
       const circle =
         TestUtils.findRenderedDOMComponentWithTag(this.subject(), 'circle');
       expect(circle.getAttribute('stroke-width')).toEqual(String(width));
