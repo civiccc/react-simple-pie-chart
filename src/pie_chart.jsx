@@ -74,11 +74,23 @@ export default class PieChart extends React.Component {
    * @return {Object}
    */
   render() {
+    const border = this.props.borderWidth > 0 ? (
+      <circle
+        cx={center}
+        cy={center}
+        r={radius}
+        stroke={this.props.borderColor}
+        strokeWidth={this.props.borderWidth}
+        fill='transparent'
+      />
+    ) : null;
+
     return (
       <svg viewBox={`0 0 ${size} ${size}`}>
         <g transform={`rotate(-90 ${center} ${center})`}>
           {renderPaths(this.props.slices)}
         </g>
+        {border}
       </svg>
     );
   }
@@ -89,4 +101,11 @@ PieChart.propTypes = {
     color: PropTypes.string.isRequired, // hex color
     value: PropTypes.number.isRequired,
   })).isRequired,
+  borderColor: PropTypes.string,
+  borderWidth: PropTypes.number,
+};
+
+PieChart.defaultProps = {
+  borderColor: '#FFFFFF',
+  borderWidth: 0
 };
