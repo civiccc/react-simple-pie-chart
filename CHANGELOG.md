@@ -1,5 +1,8 @@
 ## master (unreleased)
 
+## 0.5.0
+- Add `borderWidth` and `borderColor` props
+
 ## 0.4.1
 - Use `prop-types` package instead of `React.PropTypes`
 
