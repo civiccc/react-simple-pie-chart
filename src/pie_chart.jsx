@@ -1,48 +1,35 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-const size = 100;
-const radCircumference = Math.PI * 2;
-const center = size / 2;
-const radius = center - 1; // padding to prevent clipping
+const RADIUS_CIRCUMFERENCE = Math.PI * 2
 
-/**
- * @param {Object[]} slices
- * @return {Object[]}
- */
-function renderPaths(slices) {
-  const total = slices.reduce((totalValue, { value }) => totalValue + value, 0);
+function renderPaths(slices, size) {
+  const center = size / 2
+  const radius = center - 1 // padding to prevent clipping
+  const total = slices.reduce((totalValue, { value }) => totalValue + value, 0)
 
-  let radSegment = 0;
-  let lastX = radius;
-  let lastY = 0;
+  let radSegment = 0
+  let lastX = radius
+  let lastY = 0
 
   return slices.map(({ color, value }, index) => {
     // Should we just draw a circle?
     if (value === total) {
-      return (
-        <circle
-          r={radius}
-          cx={center}
-          cy={center}
-          fill={color}
-          key={index}
-        />
-      );
+      return <circle r={radius} cx={center} cy={center} fill={color} key={index} />
     }
 
     if (value === 0) {
-      return;
+      return
     }
 
-    const valuePercentage = value / total;
+    const valuePercentage = value / total
 
     // Should the arc go the long way round?
-    const longArc = (valuePercentage <= 0.5) ? 0 : 1;
+    const longArc = valuePercentage <= 0.5 ? 0 : 1
 
-    radSegment += valuePercentage * radCircumference;
-    const nextX = Math.cos(radSegment) * radius;
-    const nextY = Math.sin(radSegment) * radius;
+    radSegment += valuePercentage * RADIUS_CIRCUMFERENCE
+    const nextX = Math.cos(radSegment) * radius
+    const nextY = Math.sin(radSegment) * radius
 
     // d is a string that describes the path of the slice.
     // The weirdly placed minus signs [eg, (-(lastY))] are due to the fact
@@ -56,56 +43,39 @@ function renderPaths(slices) {
       `${longArc},0`,
       `${nextX - lastX},${-(nextY - lastY)}`,
       'z',
-    ].join(' ');
+    ].join(' ')
 
-    lastX = nextX;
-    lastY = nextY;
+    lastX = nextX
+    lastY = nextY
 
-    return <path d={d} fill={color} key={index} />;
-  });
+    return <path d={d} fill={color} key={index} />
+  })
 }
 
-/**
- * Generates an SVG pie chart.
- * @see {http://wiki.scribus.net/canvas/Making_a_Pie_Chart}
- */
-export default class PieChart extends React.Component {
-  /**
-   * @return {Object}
-   */
-  render() {
-    const border = this.props.borderWidth > 0 ? (
-      <circle
-        cx={center}
-        cy={center}
-        r={radius}
-        stroke={this.props.borderColor}
-        strokeWidth={this.props.borderWidth}
-        fill='transparent'
-      />
-    ) : null;
+function PieChart({ size = 100, borderColor = '#FFF', borderWidth = 0, slices = [] }) {
+  const center = size / 2
+  const radius = center - 1 // padding to prevent clipping
 
-    return (
-      <svg viewBox={`0 0 ${size} ${size}`}>
-        <g transform={`rotate(-90 ${center} ${center})`}>
-          {renderPaths(this.props.slices)}
-        </g>
-        {border}
-      </svg>
-    );
-  }
+  return (
+    <svg viewBox={`0 0 ${size} ${size}`}>
+      <g transform={`rotate(-90 ${center} ${center})`}>{renderPaths(slices, size)}</g>
+      {borderWidth && (
+        <circle cx={center} cy={center} r={radius} stroke={borderColor} strokeWidth={borderWidth} fill="transparent" />
+      )}
+    </svg>
+  )
 }
 
 PieChart.propTypes = {
-  slices: PropTypes.arrayOf(PropTypes.shape({
-    color: PropTypes.string.isRequired, // hex color
-    value: PropTypes.number.isRequired,
-  })).isRequired,
+  slices: PropTypes.arrayOf(
+    PropTypes.shape({
+      color: PropTypes.string.isRequired, // hex color
+      value: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
   borderColor: PropTypes.string,
   borderWidth: PropTypes.number,
-};
+  size: PropTypes.number,
+}
 
-PieChart.defaultProps = {
-  borderColor: '#FFFFFF',
-  borderWidth: 0
-};
+export default PieChart
